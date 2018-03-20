@@ -1,0 +1,35 @@
+@import 'base/color';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 12px;
+}
+
+ul,
+ol {
+  list-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menuList {
+  width: auto;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+  background: $color;
+  li {
+    display: inline;
+    padding: 0 10px;
+    a {
+      color: $font;
+    }
+  }
+}
