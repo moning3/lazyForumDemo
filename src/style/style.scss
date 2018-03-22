@@ -9,13 +9,16 @@ body {
 }
 
 ul,
-ol {
-  list-type: none;
+ol,li {
+  list-style-type: none;
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+a:hover{
+  text-decoration: underline;
 }
 
 .menuList {
@@ -31,5 +34,17 @@ a {
     a {
       color: $font;
     }
+  }
+}
+
+.content{
+  width: 1200px;
+  margin: 0 auto;
+  .article_list{
+    width: auto;
+    overflow: hidden;
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 25px;
   }
 }

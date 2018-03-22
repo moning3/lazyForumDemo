@@ -1,5 +1,5 @@
 <template>
-<Header></Header>
+<Header index='1'></Header>
 </template>
 
 <script>
