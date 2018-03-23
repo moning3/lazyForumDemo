@@ -4,7 +4,7 @@
 
   <div class="content">
     <ul class="article_list">
-      <li v-for="i in list" :key="i.id">
+      <li v-for="i in newsList" :key="i.id">
         <router-link :to="'/article/details/' + i.id">
           【{{ i.create_at | format }}】{{ i.title }}
         </router-link>
@@ -16,6 +16,7 @@
       :total="list.length"
       :current-page="currentPage"
       @current-change="pageChange"
+      background
       layout="prev, pager, next">
     </el-pagination>
   </div>
@@ -36,12 +37,16 @@ export default {
   },
   created () {
     this.getList()
-    // this.pageChange()
   },
   filters: {
     format: formatDate
   },
   computed: {
+    newsList () {
+      return this.list.filter((item, index) => {
+        return (this.currentPage - 1) * 10 <= index && index < this.currentPage * 10
+      })
+    }
   },
   methods: {
     getList () {
@@ -51,10 +56,6 @@ export default {
     },
     pageChange (val) {
       this.currentPage = val
-      this.list.filter(function (val, index) {
-        return (this.currentPage - 1) * 10 >= index && index < this.currentPage * 10
-      })
-      return this.list
     }
   }
 }
