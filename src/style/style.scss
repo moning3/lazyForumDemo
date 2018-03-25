@@ -21,6 +21,10 @@ a:hover{
   text-decoration: underline;
 }
 
+.pdTop{
+  padding-top: 20px;
+}
+
 .menuList {
   width: auto;
   overflow: hidden;
@@ -47,4 +51,18 @@ a:hover{
     font-size: 14px;
     line-height: 25px;
   }
+  .det_con{
+    font-size: 14px;
+  }
 }
+
+.title_d{
+  margin: 20px 0;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #c5c5c5;
+  p{
+    color: #666
+  }
+}
+

@@ -17,7 +17,7 @@ export default {
       activeIndex: this.index,
       menuList: [
         { id: 1, name: '首页', src: '/' },
-        { id: 2, name: '列表', src: '/article/list' }
+        { id: 2, name: '我的主题', src: '/article/list' }
       ]
     }
   },
