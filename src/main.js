@@ -5,11 +5,12 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
+// import Config from './config'
 
 // 引用API文件
-import api from './api/index.js'
+// import api from './api/index.js'
 // 将API方法绑定到全局
-Vue.prototype.$api = api
+// Vue.prototype.$api = api
 Vue.config.productionTip = false
 
 Vue.use(ElementUI, { size: 'small' })

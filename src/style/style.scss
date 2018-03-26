@@ -25,6 +25,23 @@ a:hover{
   padding-top: 20px;
 }
 
+.nav-main-tops{
+  width: auto;
+  overflow: auto;
+  height: 30px;
+  background: #409EFF;
+  .user-info{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    a{
+      color: #fff;
+      line-height: 30px;
+      cursor: pointer;
+    }
+  }
+}
+
 .menuList {
   width: auto;
   overflow: hidden;
@@ -50,6 +67,9 @@ a:hover{
     padding: 20px 0;
     font-size: 14px;
     line-height: 25px;
+    .det_art_p{
+      background: #d5d5d5;
+    }
   }
   .det_con{
     font-size: 14px;
@@ -66,3 +86,7 @@ a:hover{
   }
 }
 
+.footer{
+  margin-top: 20px;
+  text-align: center;
+}

@@ -1,7 +1,7 @@
 <template>
 <div>
   <Header index="2"></Header>
-
+  <Menu></Menu>
   <div class="content">
     <ul class="article_list">
       <li v-for="i in newsList" :key="i.id">
@@ -24,11 +24,13 @@
 </div>
 </template>
 <script>
-import Header from '../../components/header.vue'
-import { formatDate } from '../../utils/index.js'
+import api from '../../api/index'
+import Header from '../../components/header'
+import Menu from '../../components/menu'
+import { formatDate } from '../../utils/index'
 
 export default {
-  components: { Header },
+  components: { Header, Menu },
   data () {
     return {
       list: [],
@@ -50,7 +52,7 @@ export default {
   },
   methods: {
     getList () {
-      this.$api.get('topics', null, res => {
+      api.get('topics', null, res => {
         this.list = res.data
       })
     },
